@@ -1,0 +1,51 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Fuel_Economy
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        // 計算按鈕點擊事件
+        private void calculateButton_Click(object sender, EventArgs e)
+        {
+            // 宣告公里、升、每公升公里數變數
+            double kilometers;
+            double liters;
+            double kmpl;
+
+            // 取得使用者輸入的公里數與升數
+            kilometers = double.Parse(milesTextBox.Text);
+            liters = double.Parse(gallonsTextBox.Text);
+
+            // 計算每公升公里數
+            kmpl = kilometers / liters;
+
+            // TODO: 顯示計算結果
+        }
+
+        // 離開按鈕點擊事件，關閉視窗
+        private void exitButton_Click(object sender, EventArgs e)
+        {
+            // 關閉表單
+            this.Close();
+        }
+
+        // 英里輸入框文字變更事件
+        private void milesTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+    }
+}
