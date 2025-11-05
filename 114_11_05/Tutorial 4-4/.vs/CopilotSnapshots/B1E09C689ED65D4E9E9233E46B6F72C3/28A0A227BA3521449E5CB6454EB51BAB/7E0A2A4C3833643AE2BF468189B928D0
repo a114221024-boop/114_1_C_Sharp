@@ -1,0 +1,151 @@
+﻿namespace Fuel_Economy_with_TryParse
+{
+    partial class Form1
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.exitButton = new System.Windows.Forms.Button();
+            this.calculateButton = new System.Windows.Forms.Button();
+            this.economyLabel = new System.Windows.Forms.Label();
+            this.outputDescriptionLabel = new System.Windows.Forms.Label();
+            this.litersTextBox = new System.Windows.Forms.TextBox();
+            this.milesTextBox = new System.Windows.Forms.TextBox();
+            this.litersPromptLabel = new System.Windows.Forms.Label();
+            this.milesPromptLabel = new System.Windows.Forms.Label();
+            this.SuspendLayout();
+            // 
+            // exitButton
+            // 
+            this.exitButton.Font = new System.Drawing.Font("Microsoft JhengHei", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.exitButton.Location = new System.Drawing.Point(145, 134);
+            this.exitButton.Name = "exitButton";
+            this.exitButton.Size = new System.Drawing.Size(75, 35);
+            this.exitButton.TabIndex = 15;
+            this.exitButton.Text = "結束";
+            this.exitButton.UseVisualStyleBackColor = true;
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
+            // 
+            // calculateButton
+            // 
+            this.calculateButton.Font = new System.Drawing.Font("Microsoft JhengHei", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.calculateButton.Location = new System.Drawing.Point(64, 134);
+            this.calculateButton.Name = "calculateButton";
+            this.calculateButton.Size = new System.Drawing.Size(75, 35);
+            this.calculateButton.TabIndex = 14;
+            this.calculateButton.Text = "計算每公升公里數";
+            this.calculateButton.UseVisualStyleBackColor = true;
+            this.calculateButton.Click += new System.EventHandler(this.calculateButton_Click);
+            // 
+            // economyLabel
+            // 
+            this.economyLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.economyLabel.Font = new System.Drawing.Font("Microsoft JhengHei", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.economyLabel.Location = new System.Drawing.Point(176, 79);
+            this.economyLabel.Name = "economyLabel";
+            this.economyLabel.Size = new System.Drawing.Size(100, 23);
+            this.economyLabel.TabIndex = 13;
+            this.economyLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // outputDescriptionLabel
+            // 
+            this.outputDescriptionLabel.AutoSize = true;
+            this.outputDescriptionLabel.Font = new System.Drawing.Font("Microsoft JhengHei", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.outputDescriptionLabel.Location = new System.Drawing.Point(84, 85);
+            this.outputDescriptionLabel.Name = "outputDescriptionLabel";
+            this.outputDescriptionLabel.Size = new System.Drawing.Size(84, 13);
+            this.outputDescriptionLabel.TabIndex = 12;
+            this.outputDescriptionLabel.Text = "每公升公里數:";
+            // 
+            // litersTextBox
+            // 
+            this.litersTextBox.Font = new System.Drawing.Font("Microsoft JhengHei", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.litersTextBox.Location = new System.Drawing.Point(176, 40);
+            this.litersTextBox.Name = "litersTextBox";
+            this.litersTextBox.Size = new System.Drawing.Size(100, 20);
+            this.litersTextBox.TabIndex = 11;
+            // 
+            // milesTextBox
+            // 
+            this.milesTextBox.Font = new System.Drawing.Font("Microsoft JhengHei", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.milesTextBox.Location = new System.Drawing.Point(176, 12);
+            this.milesTextBox.Name = "milesTextBox";
+            this.milesTextBox.Size = new System.Drawing.Size(100, 20);
+            this.milesTextBox.TabIndex = 10;
+            // 
+            // litersPromptLabel
+            // 
+            this.litersPromptLabel.AutoSize = true;
+            this.litersPromptLabel.Font = new System.Drawing.Font("Microsoft JhengHei", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.litersPromptLabel.Location = new System.Drawing.Point(21, 43);
+            this.litersPromptLabel.Name = "litersPromptLabel";
+            this.litersPromptLabel.Size = new System.Drawing.Size(147, 13);
+            this.litersPromptLabel.TabIndex = 9;
+            this.litersPromptLabel.Text = "輸入使用的公升數:";
+            // 
+            // milesPromptLabel
+            // 
+            this.milesPromptLabel.AutoSize = true;
+            this.milesPromptLabel.Font = new System.Drawing.Font("Microsoft JhengHei", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.milesPromptLabel.Location = new System.Drawing.Point(9, 15);
+            this.milesPromptLabel.Name = "milesPromptLabel";
+            this.milesPromptLabel.Size = new System.Drawing.Size(161, 13);
+            this.milesPromptLabel.TabIndex = 8;
+            this.milesPromptLabel.Text = "輸入行駛的公里數:";
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(284, 181);
+            this.Controls.Add(this.exitButton);
+            this.Controls.Add(this.calculateButton);
+            this.Controls.Add(this.economyLabel);
+            this.Controls.Add(this.outputDescriptionLabel);
+            this.Controls.Add(this.litersTextBox);
+            this.Controls.Add(this.milesTextBox);
+            this.Controls.Add(this.litersPromptLabel);
+            this.Controls.Add(this.milesPromptLabel);
+            this.Name = "Form1";
+            this.Text = "燃油效率";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Button exitButton;
+        private System.Windows.Forms.Button calculateButton;
+        private System.Windows.Forms.Label economyLabel;
+        private System.Windows.Forms.Label outputDescriptionLabel;
+        private System.Windows.Forms.TextBox litersTextBox;
+        private System.Windows.Forms.TextBox milesTextBox;
+        private System.Windows.Forms.Label litersPromptLabel;
+        private System.Windows.Forms.Label milesPromptLabel;
+    }
+}
+
