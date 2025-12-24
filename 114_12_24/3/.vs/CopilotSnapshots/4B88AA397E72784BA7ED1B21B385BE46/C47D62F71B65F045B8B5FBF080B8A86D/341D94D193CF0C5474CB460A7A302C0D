@@ -1,0 +1,70 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Windows.Forms;
+
+namespace WinFormsApp1
+{
+    public partial class Form1 : Form
+    {
+        private Random _rnd = new Random();
+
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void btnGenerate_Click(object sender, EventArgs e)
+        {
+            // Generate 5 unique random numbers between 1 and 100
+            var numbers = new HashSet<int>();
+            while (numbers.Count < 5)
+            {
+                int n = _rnd.Next(1, 101);
+                numbers.Add(n);
+            }
+            var list = numbers.ToList();
+            list.Sort();
+
+            txtNum1.Text = list[0].ToString();
+            txtNum2.Text = list[1].ToString();
+            txtNum3.Text = list[2].ToString();
+            txtNum4.Text = list[3].ToString();
+            txtNum5.Text = list[4].ToString();
+        }
+
+        private void btnShow_Click(object sender, EventArgs e)
+        {
+            // When "開獎號碼" is clicked, generate 5 unique random numbers between 1 and 100
+            var numbers = new HashSet<int>();
+            while (numbers.Count < 5)
+            {
+                int n = _rnd.Next(1, 101);
+                numbers.Add(n);
+            }
+            var list = numbers.ToList();
+            list.Sort();
+
+            // Update textboxes as well so user can see current numbers
+            txtNum1.Text = list[0].ToString();
+            txtNum2.Text = list[1].ToString();
+            txtNum3.Text = list[2].ToString();
+            txtNum4.Text = list[3].ToString();
+            txtNum5.Text = list[4].ToString();
+
+            // Show in listbox
+            你一定中不了的號碼.Items.Clear();
+            你一定中不了的號碼.Items.Add("本期開獎號碼：");
+            你一定中不了的號碼.Items.Add($"第1個號碼: {list[0]}");
+            你一定中不了的號碼.Items.Add($"第2個號碼: {list[1]}");
+            你一定中不了的號碼.Items.Add($"第3個號碼: {list[2]}");
+            你一定中不了的號碼.Items.Add($"第4個號碼: {list[3]}");
+            你一定中不了的號碼.Items.Add($"第5個號碼: {list[4]}");
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+    }
+}

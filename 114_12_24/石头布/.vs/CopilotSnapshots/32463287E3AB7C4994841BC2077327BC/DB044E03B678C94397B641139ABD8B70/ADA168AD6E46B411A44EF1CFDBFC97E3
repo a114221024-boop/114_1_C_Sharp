@@ -1,0 +1,167 @@
+﻿namespace WinFormsApp1
+{
+    partial class Form1
+    {
+        /// <summary>
+        ///  Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        ///  Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        ///  Required method for Designer support - do not modify
+        ///  the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.components = new System.ComponentModel.Container();
+            this.lblComputerTitle = new System.Windows.Forms.Label();
+            this.lblPlayerTitle = new System.Windows.Forms.Label();
+            this.pbComputer = new System.Windows.Forms.Label();
+            this.pbPlayer = new System.Windows.Forms.Label();
+            this.lblResult = new System.Windows.Forms.Label();
+            this.btnRock = new System.Windows.Forms.Button();
+            this.btnPaper = new System.Windows.Forms.Button();
+            this.btnScissors = new System.Windows.Forms.Button();
+            this.btnEnd = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // Form1
+            // 
+            this.ClientSize = new System.Drawing.Size(600, 420);
+            this.Name = "Form1";
+            this.Text = "石頭布剪刀";
+            this.Font = new System.Drawing.Font("Microsoft JhengHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            // 
+            // lblComputerTitle
+            // 
+            this.lblComputerTitle.AutoSize = true;
+            this.lblComputerTitle.Font = new System.Drawing.Font("Microsoft JhengHei UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblComputerTitle.Location = new System.Drawing.Point(80, 20);
+            this.lblComputerTitle.Name = "lblComputerTitle";
+            this.lblComputerTitle.Size = new System.Drawing.Size(80, 28);
+            this.lblComputerTitle.Text = "電腦出";
+            // 
+            // lblPlayerTitle
+            // 
+            this.lblPlayerTitle.AutoSize = true;
+            this.lblPlayerTitle.Font = new System.Drawing.Font("Microsoft JhengHei UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblPlayerTitle.Location = new System.Drawing.Point(400, 20);
+            this.lblPlayerTitle.Name = "lblPlayerTitle";
+            this.lblPlayerTitle.Size = new System.Drawing.Size(80, 28);
+            this.lblPlayerTitle.Text = "玩家出";
+            // 
+            // pbComputer (label used as picture area)
+            // 
+            this.pbComputer.BackColor = System.Drawing.Color.Peru;
+            this.pbComputer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbComputer.Font = new System.Drawing.Font("Segoe UI Emoji", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.pbComputer.Location = new System.Drawing.Point(30, 60);
+            this.pbComputer.Name = "pbComputer";
+            this.pbComputer.Size = new System.Drawing.Size(220, 90);
+            this.pbComputer.Text = "";
+            this.pbComputer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pbPlayer (label used as picture area)
+            // 
+            this.pbPlayer.BackColor = System.Drawing.Color.Peru;
+            this.pbPlayer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbPlayer.Font = new System.Drawing.Font("Segoe UI Emoji", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.pbPlayer.Location = new System.Drawing.Point(340, 60);
+            this.pbPlayer.Name = "pbPlayer";
+            this.pbPlayer.Size = new System.Drawing.Size(220, 90);
+            this.pbPlayer.Text = "";
+            this.pbPlayer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblResult
+            // 
+            this.lblResult.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblResult.Font = new System.Drawing.Font("Microsoft JhengHei UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblResult.Location = new System.Drawing.Point(80, 170);
+            this.lblResult.Name = "lblResult";
+            this.lblResult.Size = new System.Drawing.Size(440, 50);
+            this.lblResult.Text = "";
+            this.lblResult.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnRock
+            // 
+            this.btnRock.Font = new System.Drawing.Font("Microsoft JhengHei UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnRock.Location = new System.Drawing.Point(40, 240);
+            this.btnRock.Name = "btnRock";
+            this.btnRock.Size = new System.Drawing.Size(140, 60);
+            this.btnRock.Text = "石頭";
+            this.btnRock.UseVisualStyleBackColor = true;
+            this.btnRock.Click += new System.EventHandler(this.BtnRock_Click);
+            // 
+            // btnPaper
+            // 
+            this.btnPaper.Font = new System.Drawing.Font("Microsoft JhengHei UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnPaper.Location = new System.Drawing.Point(230, 240);
+            this.btnPaper.Name = "btnPaper";
+            this.btnPaper.Size = new System.Drawing.Size(140, 60);
+            this.btnPaper.Text = "布";
+            this.btnPaper.UseVisualStyleBackColor = true;
+            this.btnPaper.Click += new System.EventHandler(this.BtnPaper_Click);
+            // 
+            // btnScissors
+            // 
+            this.btnScissors.Font = new System.Drawing.Font("Microsoft JhengHei UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnScissors.Location = new System.Drawing.Point(420, 240);
+            this.btnScissors.Name = "btnScissors";
+            this.btnScissors.Size = new System.Drawing.Size(140, 60);
+            this.btnScissors.Text = "剪刀";
+            this.btnScissors.UseVisualStyleBackColor = true;
+            this.btnScissors.Click += new System.EventHandler(this.BtnScissors_Click);
+            // 
+            // btnEnd
+            // 
+            this.btnEnd.Font = new System.Drawing.Font("Microsoft JhengHei UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnEnd.Location = new System.Drawing.Point(220, 320);
+            this.btnEnd.Name = "btnEnd";
+            this.btnEnd.Size = new System.Drawing.Size(160, 50);
+            this.btnEnd.Text = "結束遊戲";
+            this.btnEnd.UseVisualStyleBackColor = true;
+            this.btnEnd.Click += new System.EventHandler(this.BtnEnd_Click);
+            // 
+            // Add controls
+            // 
+            this.Controls.Add(this.lblComputerTitle);
+            this.Controls.Add(this.lblPlayerTitle);
+            this.Controls.Add(this.pbComputer);
+            this.Controls.Add(this.pbPlayer);
+            this.Controls.Add(this.lblResult);
+            this.Controls.Add(this.btnRock);
+            this.Controls.Add(this.btnPaper);
+            this.Controls.Add(this.btnScissors);
+            this.Controls.Add(this.btnEnd);
+            this.ResumeLayout(false);
+            this.PerformLayout();
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Label lblComputerTitle;
+        private System.Windows.Forms.Label lblPlayerTitle;
+        private System.Windows.Forms.Label pbComputer;
+        private System.Windows.Forms.Label pbPlayer;
+        private System.Windows.Forms.Label lblResult;
+        private System.Windows.Forms.Button btnRock;
+        private System.Windows.Forms.Button btnPaper;
+        private System.Windows.Forms.Button btnScissors;
+        private System.Windows.Forms.Button btnEnd;
+    }
+}

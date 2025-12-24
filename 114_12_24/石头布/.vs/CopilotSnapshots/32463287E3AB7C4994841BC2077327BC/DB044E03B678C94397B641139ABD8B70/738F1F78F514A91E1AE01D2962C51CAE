@@ -1,0 +1,95 @@
+﻿using System;
+using System.Windows.Forms;
+
+namespace WinFormsApp1
+{
+    public partial class Form1 : Form
+    {
+        private Random _rand = new Random();
+
+        public Form1()
+        {
+            InitializeComponent();
+            ResetUI();
+        }
+
+        private void ResetUI()
+        {
+            pbComputer.Text = "";
+            pbPlayer.Text = "";
+            lblResult.Text = "";
+        }
+
+        private void BtnRock_Click(object sender, EventArgs e)
+        {
+            Play(Choice.Rock);
+        }
+
+        private void BtnPaper_Click(object sender, EventArgs e)
+        {
+            Play(Choice.Paper);
+        }
+
+        private void BtnScissors_Click(object sender, EventArgs e)
+        {
+            Play(Choice.Scissors);
+        }
+
+        private void BtnEnd_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void Play(Choice player)
+        {
+            var comp = (Choice)_rand.Next(0, 3);
+            // set emoji-like representation
+            pbComputer.Text = GetSymbol(comp);
+            pbPlayer.Text = GetSymbol(player);
+
+            var result = DetermineResult(comp, player);
+            lblResult.Text = result switch
+            {
+                Result.Draw => "平手",
+                Result.Player => "玩家贏",
+                Result.Computer => "電腦贏",
+                _ => ""
+            };
+        }
+
+        private string GetSymbol(Choice c)
+        {
+            return c switch
+            {
+                Choice.Rock => "✊",
+                Choice.Paper => "🖐",
+                Choice.Scissors => "✌",
+                _ => ""
+            };
+        }
+
+        private Result DetermineResult(Choice comp, Choice player)
+        {
+            if (comp == player) return Result.Draw;
+            if ((player == Choice.Rock && comp == Choice.Scissors) ||
+                (player == Choice.Paper && comp == Choice.Rock) ||
+                (player == Choice.Scissors && comp == Choice.Paper))
+                return Result.Player;
+            return Result.Computer;
+        }
+
+        private enum Choice
+        {
+            Rock = 0,
+            Paper = 1,
+            Scissors = 2
+        }
+
+        private enum Result
+        {
+            Draw,
+            Player,
+            Computer
+        }
+    }
+}

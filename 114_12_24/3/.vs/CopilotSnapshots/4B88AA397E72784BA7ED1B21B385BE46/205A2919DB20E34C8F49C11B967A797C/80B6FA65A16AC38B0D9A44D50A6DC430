@@ -1,0 +1,49 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Windows.Forms;
+
+namespace WinFormsApp1
+{
+    public partial class Form1 : Form
+    {
+        private Random _rnd = new Random();
+
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void btnGenerate_Click(object sender, EventArgs e)
+        {
+            // Generate 4 unique random numbers between 1 and 49 (example)
+            var numbers = new List<int>();
+            while (numbers.Count < 4)
+            {
+                int n = _rnd.Next(1, 50);
+                if (!numbers.Contains(n)) numbers.Add(n);
+            }
+            numbers.Sort();
+
+            txtNum1.Text = numbers[0].ToString();
+            txtNum2.Text = numbers[1].ToString();
+            txtNum3.Text = numbers[2].ToString();
+            txtNum4.Text = numbers[3].ToString();
+        }
+
+        private void btnShow_Click(object sender, EventArgs e)
+        {
+            listBoxResults.Items.Clear();
+            listBoxResults.Items.Add("本期開獎號碼：");
+            if (!string.IsNullOrEmpty(txtNum1.Text)) listBoxResults.Items.Add($"第1個號碼: {txtNum1.Text}");
+            if (!string.IsNullOrEmpty(txtNum2.Text)) listBoxResults.Items.Add($"第2個號碼: {txtNum2.Text}");
+            if (!string.IsNullOrEmpty(txtNum3.Text)) listBoxResults.Items.Add($"第3個號碼: {txtNum3.Text}");
+            if (!string.IsNullOrEmpty(txtNum4.Text)) listBoxResults.Items.Add($"第4個號碼: {txtNum4.Text}");
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+    }
+}
